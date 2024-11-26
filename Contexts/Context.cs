@@ -31,17 +31,23 @@ namespace Bibliotec.Contexts
                 //A string de conexao do Bando de Dados
                 //Data Source -> Nome do servidor do Banco de Dados
                 //Intial Catalog -> Nome do Banco de Dados
-                optionsBuilder.UseSqlServer(@"Data Source= NOTE26-S28\\SQLEXPRESS02; Initial Catalog = Bibliotec_mvc ; User Id=sa; Password=123; Integrated Security=true; TrustServerCertificate = true");
+                optionsBuilder.UseSqlServer(@"
+                Data Source= NOTE26-S28\\SQLEXPRESS02;
+                Initial Catalog=Bibliotec_mvc;
+                User Id=sa;
+                Password=123;
+                TrustServerCertificate = true
+                ");
             }
 
         }
 
         //As refeerncias das nossas tabelas no Banco de Dados
-        public DbSet<Categoria> Categoria{get; set;}
-        public DbSet<Curso> Curso{get; set;}
-        public DbSet<Livro> Livro{get; set;}
-        public DbSet<Usuario> Usuario{get; set;}
-        public DbSet<LivroCategoria> LivroCategoria{get; set;}
-        public DbSet<LivroReserva> LivroReserva{get; set;}
+        public DbSet<Categoria> Categoria { get; set; }
+        public DbSet<Curso> Curso { get; set; }
+        public DbSet<Livro> Livro { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<LivroCategoria> LivroCategoria { get; set; }
+        public DbSet<LivroReserva> LivroReserva { get; set; }
     }
 }
